@@ -5,6 +5,7 @@ const User = model.getModel('user');
 const Chat = model.getModel('chat');
 const _filter = { 'pwd': 0, '__v': 0 };
 
+// 删除所有聊天记录
 // Chat.remove({}, function(e, d) {})
 
 // 加密
@@ -12,7 +13,9 @@ const utils = require('utility');
 
 Router.get('/list', function(req, res) {
     const { type } = req.query
-        // User.remove({}, function(e, d) {})
+
+    // 删除所有用户
+    // User.remove({}, function(e, d) {})
     User.find({ type }, _filter, function(err, doc) {
         return res.json({ code: 0, data: doc })
     })

@@ -74,7 +74,7 @@ class Dashboard extends  React.Component{
                         ))}
                     </Switch> */}
                     <QueneAnim type='scaleX' duration={800}>
-                        <Route key={page.path} path={page.path} component={page.component}></Route>
+                        {page?<Route key={page.path} path={page.path} component={page.component}></Route>:null}
                     </QueneAnim>
                 </div>
                 <div>
